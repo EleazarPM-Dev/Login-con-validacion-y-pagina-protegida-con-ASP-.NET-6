@@ -1,5 +1,5 @@
-Este proyecto consta de un login con validacion, manejo de sesiones y tambien validacion de usuario, utiliza una base de datos que usa entityFramework 
-para ejecutar de manera satisfactoria el proyecto una vez se descargue se debe crear la siguiente base de datos
+Este proyecto consta de un login con validacion, manejo de sesiones y tambien validacion de usuario con pagina protegida, utiliza una base de datos que es manipulada con entityFramework 
+para ejecutar de manera satisfactoria el proyecto una vez se descargue se debe crear la siguiente base de datos en sql server 2019
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 create database PTItGroup;
 use PTItGroup;
@@ -12,8 +12,18 @@ perfilImg VARBINARY(MAX),
 cliente_validacion BIT
 );
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-una vez creada la base de datos se ejecuta el siguiente codigo en la consola de administrador de paquetes la version de sql es la 2019
+una vez creada la base de datos se ejecuta el siguiente codigo en la consola de administrador de paquetes 
 Scaffold-DbContext "Server=TU-SERVIDOR-SQL-SERVER;Database=PTItGroup; Trusted_Connection=True; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+como ultima configuracion abre el archivo appsettings.json del proyecti y remplaza "ConnectionStrings" y "EmailSettings" por estos: 
+ "ConnectionStrings": {
+   "PruebaContext": "Server=tu sql server;Database=PTItGroup; Trusted_Connection=True; TrustServerCertificate=True;"
+ },
+ "EmailSettings": {
 
+   "Host": "smtp.gmail.com",
+   "Port": 587,
+   "Username": "pruebas.ee.dev@gmail.com",
+   "Password": "fsjtihmjqxhpvgsd"
+ }
 y eso es todo para poder ver el proyecto :D 
