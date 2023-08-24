@@ -1,4 +1,4 @@
-Este proyecto utiliza una base de datos que usa entityFramework 
+Este proyecto consta de un login con validacion, manejo de sesiones y tambien validacion de usuario, utiliza una base de datos que usa entityFramework 
 para ejecutar de manera satisfactoria el proyecto una vez se descargue se debe crear la siguiente base de datos
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 create database PTItGroup;
@@ -14,4 +14,6 @@ cliente_validacion BIT
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 una vez creada la base de datos se ejecuta el siguiente codigo en la consola de administrador de paquetes la version de sql es la 2019
 Scaffold-DbContext "Server=TU-SERVIDOR-SQL-SERVER;Database=PTItGroup; Trusted_Connection=True; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 y eso es todo para poder ver el proyecto :D 
